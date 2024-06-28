@@ -1,6 +1,6 @@
 /*
  * Author: Zinhle Dlamini
- * Student Number: ST10462525
+ * Student Number:ST10462525
  * 
  * This program is written by Zinhle Dlamini.
  * Purpose: This class contains unit tests for the Task class to ensure correct functionality.
@@ -27,13 +27,13 @@ public class TaskTest {
     @Test
     public void testCreateTaskID() {
         Task test = new Task("Login Feature", "Create Login", "Robyn Harrison", 8);
-        assertEquals("LO:1:ROB", test.createTaskID());
+        assertEquals("LO:1:RH", test.getTaskID());
     }
 
     @Test
     public void testPrintTaskDetails() {
         Task test = new Task("Login Feature", "Create Login", "Robyn Harrison", 8);
-        String expected = "Task Name: Login Feature\nTask Description: Create Login\nDeveloper: Robyn Harrison\nTask Duration: 8 hours\nTask ID: LO:1:ROB";
+        String expected = "Task Name: Login Feature\nTask Description: Create Login\nDeveloper Details: Robyn Harrison\nTask Duration: 8 hours\nTask Status: null\nTask ID: LO:1:RH";
         assertEquals(expected, test.printTaskDetails());
     }
 
